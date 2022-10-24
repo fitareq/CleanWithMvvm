@@ -18,7 +18,7 @@ import javax.inject.Singleton
 class UseCasesModule {
 
     @Singleton
-    val BASE_URL = "https://jsonplaceholder.typicode.com/"
+    val baseUrl = "https://jsonplaceholder.typicode.com/"
 
    /* @Provides
     @Singleton
@@ -32,7 +32,7 @@ class UseCasesModule {
     @Singleton
     fun providesRetrofit():Retrofit{
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
